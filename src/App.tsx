@@ -29,13 +29,13 @@ const Image: React.FC<imageProps> = ({ url }) => {
     );
 };
 
-const Gallery: React.FC<galleryProps> = ({ urls }) => {
-    if (urls == null) {
+const Gallery: React.FC<galleryProps> = (props) => {
+    if (props.urls == null) {
         return <Loading />;
     }
     return (
         <div className="columns is-vcentered is-multiline">
-            {urls.map((url) => {
+            {props.urls.map((url) => {
                 return (
                     <div key={url} className="column is-3">
                         <Image url={url} />

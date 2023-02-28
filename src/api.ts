@@ -1,7 +1,7 @@
 
 type fetchFunc = (breed:string) => Promise<string[]>;
 
-const fetchImages: fetchFunc = async (breed:string) => {
+const fetchImages: fetchFunc = async (breed) => {
     const response = await fetch(
         `https://dog.ceo/api/breed/${breed}/images/random/12`
     );
